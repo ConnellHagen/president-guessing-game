@@ -62,10 +62,10 @@ void setup_president_game(Question_Game* game)
     Question_Node* offic = new Question_Node(term, repub, "Did they die in office?");
     Question_Node* democ = new Question_Node(jfk, garfield, "Were they a Democrat?");
     Question_Node* assas = new Question_Node(democ, offic, "Were they assassinated?");
-    Question_Node* chief = new Question_Node(taft, hoover, "Were they a chief justice?");
-    Question_Node* elecv = new Question_Node(b_harrison, hayes, "Did they recieve enough electoral votes to win?");
-    Question_Node* lawye = new Question_Node(elecv, chief, "Were they a lawyer?");
-    Question_Node* aliv2 = new Question_Node(trump, lawye, "Are they still alive?");
+    Question_Node* lawye = new Question_Node(b_harrison, hoover, "Were they a lawyer?");
+    Question_Node* elecv = new Question_Node(lawye, hayes, "Did they receive enough electoral votes to win?");
+    Question_Node* chief = new Question_Node(taft, elecv, "Were they a chief justice?");
+    Question_Node* aliv2 = new Question_Node(trump, chief, "Are they still alive?");
     Question_Node* texas = new Question_Node(polk, pierce, "Did they annex texas?");
     Question_Node* repre = new Question_Node(buchanan, buren, "Were they ever a member of the house of representatives?");
     Question_Node* lawy2 = new Question_Node(repre, texas, "Were they a lawyer?");
@@ -106,4 +106,8 @@ int main()
     setup_president_game(&president_game);
 
     president_game.play_game();
+
+    std::cout << "Type anything to exit.\n";
+    std::string temp;
+    std::cin >> temp;
 }
