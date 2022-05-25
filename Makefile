@@ -10,7 +10,7 @@ question-game.o: question-game.cpp question-game.hpp
 	$(CC) -c question-game.cpp
 
 clean:
-	-rm -f *.o core *.core *.out *.exe
+	-rm -f *.o core *.core *.out
 
 all: run
 
