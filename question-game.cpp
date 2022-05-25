@@ -49,8 +49,6 @@ void Question_Game::play_game()
 {
     current_node = root_node;
 
-    std::cout << "\n\n\n";
-
     while(!current_node->get_is_answer())
     {
         next_question();
