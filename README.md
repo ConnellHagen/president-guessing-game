@@ -12,9 +12,14 @@ This may also test your knowledge of the presidents if you aren't too familiar w
 
 In the `Releases` section, there is a zip with a .exe which you can run to open this game.
 
-Alternatively, if for whatever reason you would like to compile yourself here are the instruction for Windows:
+Alternatively, if for whatever reason you would like to compile yourself here are the instructions
 
+#### Linux:
+1. Clone this repository and navigate to it in `bash`
+1. Run `make run`
+
+#### Windows:
 1. Install `chocolatey` package manager
 2. Run `choco install make` to install `make` for Windows
 3. Clone this repository and navigate to it in terminal
-4. Run `make run` in order to compile and run the file. To remove the files created you can run `make clean`
+4. Run `make run` in order to compile and run the file
